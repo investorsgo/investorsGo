@@ -26,7 +26,7 @@ function Register() {
       <Helmet>
       <title>Register | investorsGo</title>
       </Helmet>
-      <div className='grid grid-cols-2 w-full'>
+      <div className='grid grid-cols-1 w-full'>
         <div className='hidden sm:block'>
         </div>
         <div className='flex flex-col justify-center py-20'>
@@ -101,7 +101,7 @@ function Register() {
                     </div>
                     <div className='py-2'>
                         <input type="checkbox" className="checkbox w-5 h-5" required/>
-                        <label> I have read the <span>Terms of Service</span> and <span>Privacy Policy</span></label>
+                        <label> I have read the <span className='text-[#00bf63] underline'>Terms of Service</span> and <span className='text-[#00bf63] underline'>Privacy Policy</span></label>
                     </div>
                     <button className='w-full my-5 py-2 bg-[#00bf63] text-white font-semibold rounded-lg hover:bg-teal-500'>Register</button>
                 </form>
