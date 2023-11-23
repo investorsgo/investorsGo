@@ -9,7 +9,7 @@ const Footer = () => {
       <aside className="items-center grid-flow-col">
         <img className='w-[150px]' src={darkModeLogo} alt='logo' />
         <p className="px-10">Copyright © 2023 - All Right Reserved</p>
-        <p className="px-2 text-[#00bf63]">Terms of Service</p>
+        <p className="px-2 text-[#00bf63]">Terms and Conditions</p>
         <p className="text-[#00bf63]">Privacy Policy</p>
       </aside> 
       <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
