@@ -109,7 +109,7 @@ function Register() {
                         </div>
                         <div className='py-2'>
                             <input type="checkbox" className="checkbox w-5 h-5" required/>
-                            <label> I have read the <span className='text-[#00bf63] underline'>Terms and Conditions</span> and the <span className='text-[#00bf63] underline'>Privacy Policy</span>.</label>
+                            <label> I have read and agreed to the <span className='text-[#00bf63] underline'>Terms and Conditions</span> and the <span className='text-[#00bf63] underline'>Privacy Policy</span>.</label>
                         </div>
                         <button className='w-full my-5 p-2 bg-[#00bf63] text-white font-semibold rounded-lg hover:bg-teal-500'>Register</button>
                         </div>

@@ -4,7 +4,7 @@ import ReactSwitch from 'react-switch';
 const MembershipsLoggedIn = () => {
   const [annually, setAnnually] = useState(false);
   return(
-    <div className='text-white'>
+    <div className='text-white grid grid-cols-2'>
       <div className="hero min-h-screen bg-base-200">
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <div className="card-body">
@@ -43,6 +43,9 @@ const MembershipsLoggedIn = () => {
             </div>
             
         </div>
+      </div>
+      <div>
+        <p className='md:text-5xl sm:text-4xl text-2xl font-bold md:py-6 text-[#00bf63] p-6 text-center flex flex-col justify-center'>Premium Membership</p>
       </div>
     </div>
   )

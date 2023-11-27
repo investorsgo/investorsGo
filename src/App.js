@@ -10,6 +10,7 @@ import Messages from './components/Messages';
 import Notifications from './components/Notifications';
 import MembershipsLoggedIn from './components/MembershipsLoggedIn';
 import BrandAmbassador from './components/BrandAmbassador';
+import PrivacyPolicy from './components/PortfolioPage/PrivacyPolicy';
 
 class App extends Component {
   render() {
@@ -24,7 +25,8 @@ class App extends Component {
         <Route exact path="/messages" element={<Messages />} />
         <Route exact path="/notifications" element={<Notifications />} />
         <Route exact path="/membership" element={<MembershipsLoggedIn />} />
-        <Route exact path ="/brandambassador" element={<BrandAmbassador />} />
+        <Route exact path="/brandambassador" element={<BrandAmbassador />} />
+        <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />
       </Routes>
     </Router>
     );

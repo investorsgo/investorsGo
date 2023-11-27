@@ -10,7 +10,6 @@ import {GoVerified} from "react-icons/go";
 import {LiaUserFriendsSolid} from "react-icons/lia";
 import {CgProfile} from "react-icons/cg";
 
-
 import darkModeLogo from './assets/darkModeLogo.png';
 import { useNavigate } from "react-router-dom";
 import { loggedIn } from "./PortfolioPage/Register";
@@ -29,7 +28,7 @@ const Navbar = () => {
   const handleClickHome = () => navigate('/');
 
   return (
-    <div className="flex justify-between items-center h-24 text-white z-50 mx-auto border-b bg-neutral">
+    <div className="flex justify-between items-center h-24 text-white z-50 mx-auto bg-neutral">
       <img className='w-[150px]' src={darkModeLogo} alt='logo' onClick={handleClickHome} />
       {!loggedIn &&
       <ul className="hidden md:flex font-bold pr-8">
