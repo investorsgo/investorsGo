@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between items-center h-24 text-white z-50 mx-auto bg-neutral">
-      <img className='w-[150px]' src={darkModeLogo} alt='logo' onClick={handleClickHome} />
+      <img className='w-[150px] cursor-pointer' src={darkModeLogo} alt='logo' onClick={handleClickHome} />
       {!loggedIn &&
       <ul className="hidden md:flex font-bold pr-8">
         <button className="p-4 hover:text-[#00bf63]" onClick={handleClickLogin}>Log-In</button>
