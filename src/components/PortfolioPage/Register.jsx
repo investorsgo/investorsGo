@@ -11,6 +11,7 @@ function Register() {
 
   const navigate = useNavigate();
   const handleClickLogin = () => navigate('/login'); 
+  const handleClickPrivacyPolicy = () => navigate('/privacypolicy');
 
   const [selectedYear, setSelectedYear] = React.useState('');
   const [selectedDay, setSelectedDay] = React.useState('');
@@ -36,7 +37,7 @@ function Register() {
       </Helmet>
       <div className='grid grid-cols-1 w-full'>
         <div className='flex flex-col justify-center py-20'>
-                    <form className='max-w-[400px] w-full mx-auto rounded-lg p-8 px-8'>
+                    <form className='max-w-[400px] w-full mx-auto rounded-lg p-8 px-8 bg-base-200'>
                     <div className="shadow-2xl p-0.1">
                         <p className="md:text-3xl sm:text-2xl font-bold mb-6 text-white text-center">Sign Up Today!</p>
                         <div className='flex flex-col text-gray-400 p-2'>
@@ -109,7 +110,7 @@ function Register() {
                         </div>
                         <div className='py-2'>
                             <input type="checkbox" className="checkbox w-5 h-5" required/>
-                            <label> I have read and agreed to the <span className='text-[#00bf63] underline'>Terms and Conditions</span> and the <span className='text-[#00bf63] underline'>Privacy Policy</span>.</label>
+                            <label> I have read and agreed to the <span className='text-[#00bf63] underline'>Terms and Conditions</span> and the <span className='text-[#00bf63] underline hover:cursor-pointer' onClick={handleClickPrivacyPolicy}>Privacy Policy</span>.</label>
                         </div>
                         <button className='w-full my-5 p-2 bg-[#00bf63] text-white font-semibold rounded-lg hover:bg-teal-500'>Register</button>
                         </div>

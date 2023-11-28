@@ -23,7 +23,7 @@ function Login() {
       </Helmet>
       <div className="grid grid-cols-1 w-full">
         <div className="flex flex-col justify-center py-40">
-          <div className="max-w-[400px] w-full mx-auto rounded-lg overflow-hidden shadow-2xl">
+          <div className="max-w-[400px] w-full mx-auto rounded-lg overflow-hidden shadow-2xl bg-base-200">
             <p className="md:text-3xl sm:text-2xl font-bold md:py-6 py-[10rem] flex items-center justify-center text-white">Welcome Back!</p>
             <form className="px-8 py-6">
               <div className="flex flex-col py-2 text-gray-400">

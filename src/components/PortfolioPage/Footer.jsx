@@ -2,17 +2,28 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import darkModeLogo from '../assets/darkModeLogo.png';
-import { FaInstagram, FaDiscord } from "react-icons/fa";
-import {FaXTwitter} from "react-icons/fa6";
+import { FaInstagram} from "react-icons/fa";
+import {FaXTwitter, FaThreads} from "react-icons/fa6";
 
 const Footer = () => {
 
-const navigate = useNavigate();
-const handleClickPrivacyPolicy = () => navigate('/privacypolicy');
-const handleClickInstagram = () => {
-  const instagramURL = `https://www.instagram.com/investorsgo.co/`;
-  window.open(instagramURL, '_blank');
-};
+  const navigate = useNavigate();
+  const handleClickPrivacyPolicy = () => navigate('/privacypolicy');
+
+  const handleClickInstagram = () => {
+    const instagramURL = 'https://www.instagram.com/investorsgo.co/';
+    window.open(instagramURL, '_blank');
+  };
+
+  const handleClickX = () => {
+    const xURL = 'https://twitter.com/investorsGo';
+    window.open(xURL, '_blank')
+  }
+
+  const handleClickThreads = () => {
+    const threadsURL = 'https://www.threads.net/@investorsgo.co';
+    window.open(threadsURL, '_blank');
+  }
   return (
     <footer className="footer items-center p-4 bg-neutral text-neutral-content">
       <aside className="items-center grid-flow-col">
@@ -26,10 +37,10 @@ const handleClickInstagram = () => {
           <FaInstagram size={30} className="transition-opacity duration-100 ease-in-out group-hover:opacity-50 hover:cursor-pointer" onClick={handleClickInstagram}/>
         </div>
         <div className="group">
-          <FaDiscord size={30} className="transition-opacity duration-100 ease-in-out group-hover:opacity-50 hover:cursor-pointer" />
+          <FaThreads size={30} className="transition-opacity duration-100 ease-in-out group-hover:opacity-50 hover:cursor-pointer" onClick={handleClickThreads} />
         </div>
         <div className="group">
-          <FaXTwitter size={30} className="transition-opacity duration-100 ease-in-out group-hover:opacity-50 hover:cursor-pointer" />
+          <FaXTwitter size={30} className="transition-opacity duration-100 ease-in-out group-hover:opacity-50 hover:cursor-pointer" onClick={handleClickX}/>
         </div>
       </nav>
     </footer>
