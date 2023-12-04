@@ -7,6 +7,30 @@ import { IoEyeSharp, IoEyeOffSharp } from "react-icons/io5";
 
 export const loggedIn = false; 
 
+export const email = 'info@investorsgo.co';
+export const firstName = 'investorsGo';
+export const lastName = 'Support';
+
+function EmailConfirmation() {
+    return(
+        <div className='grid grid-cols-1 w-full'>
+        <div className='flex flex-col justify-center py-20'>
+            <form className='max-w-[400px] w-full mx-auto rounded-lg p-8 px-8 bg-base-200'>
+                    <div className="shadow-2xl p-0.1">
+                        <p className="md:text-3xl sm:text-2xl font-bold mb-6 text-white text-center">Confirm Your Email</p>
+                        <div className='flex flex-col text-gray-400 p-2'>
+                            <label>6 Digit Code*</label>
+                            <input className='rounded-lg bg-gray-500 mt-2 p-2 focus:outline-none w-full' type="number" required/>
+                            <button className='w-full my-5 p-2 bg-[#00bf63] text-white font-semibold rounded-lg hover:bg-teal-500'>Confirm</button>
+                            <p>A confirmation email has been sent to {email}.</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    );
+}
+
 function Register() {
 
   const navigate = useNavigate();
@@ -17,6 +41,7 @@ function Register() {
   const [selectedDay, setSelectedDay] = React.useState('');
 
   const [showPassword, setShowPassword] = useState(false);
+  const [showEmailConfirmation, setShowEmailConfirmation] = useState(false);
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -35,9 +60,10 @@ function Register() {
       <Helmet>
       <title>Register | investorsGo</title>
       </Helmet>
+      {!showEmailConfirmation &&
       <div className='grid grid-cols-1 w-full'>
         <div className='flex flex-col justify-center py-20'>
-                    <form className='max-w-[400px] w-full mx-auto rounded-lg p-8 px-8 bg-base-200'>
+            <form className='max-w-[400px] w-full mx-auto rounded-lg p-8 px-8 bg-base-200'>
                     <div className="shadow-2xl p-0.1">
                         <p className="md:text-3xl sm:text-2xl font-bold mb-6 text-white text-center">Sign Up Today!</p>
                         <div className='flex flex-col text-gray-400 p-2'>
@@ -109,16 +135,18 @@ function Register() {
                             <p className='flex items-center text-[#00bf63] underline' onClick={handleClickLogin}>Have an Account?</p>
                         </div>
                         <div className='py-2'>
-                            <input type="checkbox" className="checkbox w-5 h-5" required/>
+                            <input className="mr-1" type="checkbox" required/>                            
                             <label> I have read and agreed to the <span className='text-[#00bf63] underline'>Terms and Conditions</span> and the <span className='text-[#00bf63] underline hover:cursor-pointer' onClick={handleClickPrivacyPolicy}>Privacy Policy</span>.</label>
                         </div>
-                        <button className='w-full my-5 p-2 bg-[#00bf63] text-white font-semibold rounded-lg hover:bg-teal-500'>Register</button>
+                        <button className='w-full my-5 p-2 bg-[#00bf63] text-white font-semibold rounded-lg hover:bg-teal-500' onClick={() => setShowEmailConfirmation(!showEmailConfirmation)}>Register</button>
                         </div>
                     </form>
             </div>
-        </div>    
+        </div>}
+        {showEmailConfirmation && <EmailConfirmation />}    
     </div>
   );
 }
+
 
 export default Register;

@@ -8,7 +8,7 @@ import BusinessHub from './components/BusinessHub';
 import Insights from './components/Insights';
 import Messages from './components/Messages';
 import Notifications from './components/Notifications';
-import MembershipsLoggedIn from './components/MembershipsLoggedIn';
+import MembershipsLoggedIn from './components/Memberships';
 import BrandAmbassador from './components/BrandAmbassador';
 import PrivacyPolicy from './components/PortfolioPage/PrivacyPolicy';
 

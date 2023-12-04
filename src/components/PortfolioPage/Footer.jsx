@@ -28,7 +28,10 @@ const Footer = () => {
     <footer className="footer items-center p-4 bg-neutral text-neutral-content">
       <aside className="items-center grid-flow-col">
         <img className='w-[150px]' src={darkModeLogo} alt='logo' />
-        <p className="px-10">Copyright © 2023 - All Right Reserved</p>
+          <div>
+            <p className="px-10">Copyright © 2023 - All Right Reserved</p>
+            <p className="px-10">Contact us at <span className="text-[#00bf63]">info@investorsgo.co</span></p>
+          </div>
         <p className="px-2 text-[#00bf63]">Terms and Conditions</p>
         <p className="text-[#00bf63] hover:cursor-pointer" onClick={handleClickPrivacyPolicy}>Privacy Policy</p>
       </aside> 

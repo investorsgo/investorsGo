@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 import Navbar from './Navbar';
 import Hero from './PortfolioPage/Hero';
 import About from './PortfolioPage/About';
-import Memberships from './PortfolioPage/Memberships';
 import Footer from './PortfolioPage/Footer';
 import Dashboard from './Dashboard';
 import { loggedIn } from './PortfolioPage/Register';
@@ -26,7 +25,6 @@ function Home() {
       <Navbar />
       <Hero />
       <About />
-      <Memberships />
       <Footer />
       </ul>
       }

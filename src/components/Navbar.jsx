@@ -32,6 +32,7 @@ const Navbar = () => {
       <img className='w-[150px] cursor-pointer' src={darkModeLogo} alt='logo' onClick={handleClickHome} />
       {!loggedIn &&
       <ul className="hidden md:flex font-bold pr-8">
+        <button className="p-4 hover:text-[#00bf63]" onClick={handleClickMembership}>Premium Membership</button>
         <button className="p-4 hover:text-[#00bf63]" onClick={handleClickLogin}>Log-In</button>
         <button className="p-4 hover:text-[#00bf63]" onClick={handleClickRegister}>Register</button>
       </ul>
@@ -68,6 +69,7 @@ const Navbar = () => {
       <div className={nav? "fixed left-0 top-0 w-[60%] border-r h-full border-r-gray-900 bg-[#000300] ease-in-out duration-750": "fixed left-[-150%]"}>
       {!loggedIn &&
         <ul className="p-4 font-bold flex flex-col">
+          <button className="p-4 border-b border-gray-450 hover:text-[#00bf63]" onClick={handleClickMembership}>Premium Membership</button>
           <button className="p-4 border-b border-gray-450 hover:text-[#00bf63]" onClick={handleClickLogin}>Log-In</button>
           <button className="p-4 hover:text-[#00bf63]" onClick={handleClickRegister}>Register</button>
         </ul>
