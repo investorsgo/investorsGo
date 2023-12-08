@@ -22,7 +22,7 @@ function EmailConfirmation() {
                             <label>6 Digit Code*</label>
                             <input className='rounded-lg bg-gray-500 mt-2 p-2 focus:outline-none w-full' type="number" required/>
                             <button className='w-full my-5 p-2 bg-[#00bf63] text-white font-semibold rounded-lg hover:bg-teal-500'>Confirm</button>
-                            <p>A confirmation email has been sent to {email}.</p>
+                            <p>A confirmation email has been sent to <span className='text-[#00BF63]'>{email}</span>.</p>
                         </div>
                     </div>
                 </form>
