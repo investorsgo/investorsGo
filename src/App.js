@@ -11,6 +11,7 @@ import Notifications from './components/Notifications';
 import MembershipsLoggedIn from './components/Memberships';
 import BrandAmbassador from './components/BrandAmbassador';
 import PrivacyPolicy from './components/PortfolioPage/PrivacyPolicy';
+import Support from './components/PortfolioPage/Support';
 
 class App extends Component {
   render() {
@@ -27,6 +28,7 @@ class App extends Component {
         <Route exact path="/membership" element={<MembershipsLoggedIn />} />
         <Route exact path="/brandambassador" element={<BrandAmbassador />} />
         <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route exact path="/support" element={<Support />} />
       </Routes>
     </Router>
     );

@@ -9,6 +9,7 @@ const Footer = () => {
 
   const navigate = useNavigate();
   const handleClickPrivacyPolicy = () => navigate('/privacypolicy');
+  const handleClickSupport = () => navigate('/support');
 
   const handleClickInstagram = () => {
     const instagramURL = 'https://www.instagram.com/investorsgo.co/';
@@ -34,6 +35,8 @@ const Footer = () => {
           </div>
         <p className="px-2 text-[#00bf63]">Terms and Conditions</p>
         <p className="text-[#00bf63] hover:cursor-pointer" onClick={handleClickPrivacyPolicy}>Privacy Policy</p>
+        <p className="px-2 text-[#00bf63] hover:cursor-pointer" onClick={handleClickSupport}>Support</p>
+
       </aside> 
       <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
         <div className="group">
