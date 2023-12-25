@@ -48,8 +48,8 @@ function Support() {
                     <option>Payment Issues</option>
                     <option>Privacy Policy Questions</option>
                     <option>Terms and Conditions Questions</option>
-                    <option>Account Deletion</option>
-                    <option>Account Data</option>
+                    <option>Request Account Deletion</option>
+                    <option>Request Account Data</option>
                     <option>Other</option>
                   </select>
                 </div>

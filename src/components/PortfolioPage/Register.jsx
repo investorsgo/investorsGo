@@ -37,11 +37,24 @@ function Register() {
   const handleClickLogin = () => navigate('/login'); 
   const handleClickPrivacyPolicy = () => navigate('/privacypolicy');
 
-  const [selectedYear, setSelectedYear] = React.useState('');
-  const [selectedDay, setSelectedDay] = React.useState('');
-
   const [showPassword, setShowPassword] = useState(false);
   const [showEmailConfirmation, setShowEmailConfirmation] = useState(false);
+
+  const [data, setData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    DOBMonth: '',
+    DOBDay: '',
+    DOBYear: '',
+    password: '',
+    admin: false,
+    accountType: 'basic'
+  })
+  const registerUser = async (e) =>{
+    e.preventDefault();
+   // const {firstName, lastName, email, DOBMonth, DOBDay, DOBYear, password, admin, accountType} = data
+  }
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -63,62 +76,62 @@ function Register() {
       {!showEmailConfirmation &&
       <div className='grid grid-cols-1 w-full'>
         <div className='flex flex-col justify-center py-20'>
-            <form className='max-w-[400px] w-full mx-auto rounded-lg p-8 px-8 bg-base-200'>
+            <form className='max-w-[400px] w-full mx-auto rounded-lg p-8 px-8 bg-base-200' onSubmit={registerUser}>
                     <div className="shadow-2xl p-0.1">
                         <p className="md:text-3xl sm:text-2xl font-bold mb-6 text-white text-center">Sign Up Today!</p>
                         <div className='flex flex-col text-gray-400 p-2'>
                             <label>Email*</label>
-                            <input className='rounded-lg bg-gray-500 mt-2 p-2 focus:outline-none w-full' type="email" required/>
+                            <input className='rounded-lg bg-gray-500 mt-2 p-2 focus:outline-none w-full' type="email" name="email" value={data.email} onChange={(e) => setData({...data, email: e.target.value})}/>
                         </div>
                         <div className='flex flex-col text-gray-400 p-2'>
                             <label>First Name*</label>
-                            <input className='rounded-lg bg-gray-500 mt-2 p-2 focus:outline-none w-full' type="firstName" required/>
+                            <input className='rounded-lg bg-gray-500 mt-2 p-2 focus:outline-none w-full' type="firstName" name='firstName' value={data.firstName} onChange={(e) => setData({...data, firstName: e.target.value})}/>
                         </div>
                         <div className='flex flex-col text-gray-400 p-2'>
                             <label>Last Name*</label>
-                            <input className='rounded-lg bg-gray-500 mt-2 p-2 focus:outline-none w-full' type="lastName" required/>
+                            <input className='rounded-lg bg-gray-500 mt-2 p-2 focus:outline-none w-full' type="lastName" name='lastName' value={data.lastName} onChange={(e) => setData({...data, lastName: e.target.value})}/>
                         </div>
                         <div className='flex-col text-gray-400 py-2'>
-                                <label className='px-2'>Date of Birth*</label>
-                            <div className='flex'>
-                                <div className='px-2'>
-                                    <select className="select w-full max-w-xs" required>
-                                        <option disabled selected required>Month</option>
-                                        <option>January</option>
-                                        <option>February</option>
-                                        <option>March</option>
-                                        <option>April</option>
-                                        <option>May</option>
-                                        <option>June</option>
-                                        <option>July</option>
-                                        <option>August</option>
-                                        <option>September</option>
-                                        <option>October</option>
-                                        <option>November</option>
-                                        <option>December</option>
-                                    </select>
-                                </div>
-                                <div>
-                                <select className="select w-full max-w-xs" value={selectedDay} onChange={(e) => setSelectedDay(e.target.value)} required>
-                                    <option value="" disabled>Day</option>
-                                    {days.map((days) => (
-                                    <option key={days} value={days}>
-                                        {days}
-                                    </option>
-                                    ))}
-                                </select>
-                                </div>                 
-                                <div className='px-2'>
-                                <select className="select w-full max-w-xs" value={selectedYear} onChange={(e) => setSelectedYear(e.target.value)} required>
-                                    <option value="" disabled>Year</option>
-                                    {years.map((year) => (
-                                    <option key={year} value={year}>
-                                        {year}
-                                    </option>
-                                    ))}
-                                </select>
-                                </div>
+                        <label className='px-2'>Date of Birth*</label>
+                        <div className='flex'>
+                            <div className='px-2'>
+                            <select className="select w-full max-w-xs" value={data.DOBMonth} onChange={(e) => setData({ ...data, DOBMonth: e.target.value })} required>
+                                <option value="" disabled>Month</option>
+                                <option value="January">January</option>
+                                <option value="February">February</option>
+                                <option value="March">March</option>
+                                <option value="April">April</option>
+                                <option value="May">May</option>
+                                <option value="June">June</option>
+                                <option value="July">July</option>
+                                <option value="August">August</option>
+                                <option value="September">September</option>
+                                <option value="October">October</option>
+                                <option value="November">November</option>
+                                <option value="December">December</option>
+                            </select>
                             </div>
+                            <div>
+                            <select className="select w-full max-w-xs" value={data.DOBDay} onChange={(e) => setData({ ...data, DOBDay: e.target.value })} required>
+                                <option value="" disabled>Day</option>
+                                {days.map((day) => (
+                                <option key={day} value={day}>
+                                    {day}
+                                </option>
+                                ))}
+                            </select>
+                            </div>
+                            <div className='px-2'>
+                            <select className="select w-full max-w-xs" value={data.DOBYear} onChange={(e) => setData({ ...data, DOBYear: e.target.value })} required>
+                                <option value="" disabled>Year</option>
+                                {years.map((year) => (
+                                <option key={year} value={year}>
+                                    {year}
+                                </option>
+                                ))}
+                            </select>
+                            </div>
+                        </div>
                         </div>
                         <div className='flex flex-col text-gray-400 p-2 relative'>
                             <label>Password*</label>
@@ -129,7 +142,7 @@ function Register() {
                         </div>
                         <div className='flex flex-col text-gray-400 p-2'>
                             <label>Confirm Password*</label>
-                            <input className='p-2 rounded-lg bg-gray-500 mt-2 focus:outline-none' type="password" required/>
+                            <input className='p-2 rounded-lg bg-gray-500 mt-2 focus:outline-none' type="password" name='password' value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
                         </div>
                         <div className='flex text-gray-400 py-2'>
                             <p className='flex items-center text-[#00bf63] underline' onClick={handleClickLogin}>Have an Account?</p>

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Helmet from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar';
-
 import { IoEyeSharp, IoEyeOffSharp } from 'react-icons/io5';
+import axios from 'axios';
 
 function Login() {
   const navigate = useNavigate();
@@ -15,6 +15,16 @@ function Login() {
     setShowPassword(!showPassword);
   };
 
+  const loginUser = (e) =>{
+    e.preventDefault();
+    axios.get('/');
+  }
+
+  const [data, setData] = useState({
+    email: '',
+    password: '',
+  })
+
   return (
     <div>
       <Navbar />
@@ -25,12 +35,14 @@ function Login() {
         <div className="flex flex-col justify-center py-40">
           <div className="max-w-[400px] w-full mx-auto rounded-lg overflow-hidden shadow-2xl bg-base-200">
             <p className="md:text-3xl sm:text-2xl font-bold md:py-6 py-[10rem] flex items-center justify-center text-white">Welcome Back!</p>
-            <form className="px-8 py-6">
+            <form className="px-8 py-6" onSubmit={loginUser}>
               <div className="flex flex-col py-2 text-gray-400">
                 <label>Email</label>
                 <input
                   className="rounded-lg mt-2 p-2 focus:outline-none bg-gray-500"
                   type="email"
+                  value={data.email} 
+                  onChange={(e) => setData({...data, email: e.target.value})}
                 />
               </div>
               <div className="flex flex-col py-2 relative text-gray-400">
@@ -38,7 +50,8 @@ function Login() {
                 <input
                   className="p-2 rounded-lg mt-2 focus:outline-none bg-gray-500"
                   type={showPassword ? 'text' : 'password'}
-                  required
+                  value={data.password} 
+                  onChange={(e) => setData({...data, password: e.target.value})}
                 />
                 <span className="absolute right-2 top-2 cursor-pointer" onClick={togglePasswordVisibility}>
                   {showPassword ? <IoEyeOffSharp /> : <IoEyeSharp />}
