@@ -5,11 +5,12 @@ import Helmet from 'react-helmet';
 
 import { IoEyeSharp, IoEyeOffSharp } from "react-icons/io5";
 
-export const loggedIn = false; 
+export const loggedIn = true; 
 
 export const email = 'info@investorsgo.co';
 export const firstName = 'investorsGo';
 export const lastName = 'Support';
+export const accountType = 'basic';
 
 function EmailConfirmation() {
     return(
@@ -48,13 +49,13 @@ function Register() {
     DOBDay: '',
     DOBYear: '',
     password: '',
-    admin: false,
-    accountType: 'basic'
+    adminAccount: false,
+    accountType: 'basic',
   })
+  
   const registerUser = async (e) =>{
     e.preventDefault();
-   // const {firstName, lastName, email, DOBMonth, DOBDay, DOBYear, password, admin, accountType} = data
-  }
+}
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);

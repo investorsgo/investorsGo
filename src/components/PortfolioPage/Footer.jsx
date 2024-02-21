@@ -9,7 +9,7 @@ const Footer = () => {
 
   const navigate = useNavigate();
   const handleClickPrivacyPolicy = () => navigate('/privacypolicy');
-  const handleClickSupport = () => navigate('/support');
+  const handleClickSupport = () => navigate('../support');
 
   const handleClickInstagram = () => {
     const instagramURL = 'https://www.instagram.com/investorsgo.co/';
@@ -30,7 +30,7 @@ const Footer = () => {
       <aside className="items-center grid-flow-col">
         <img className='w-[150px]' src={darkModeLogo} alt='logo' />
           <div>
-            <p className="px-10">Copyright © 2023 - All Right Reserved</p>
+            <p className="px-10">Copyright © 2024 - All Right Reserved</p>
             <p className="px-10">Contact us at <span className="text-[#00bf63]">info@investorsgo.co</span></p>
           </div>
         <p className="px-2 text-[#00bf63]">Terms and Conditions</p>

@@ -15,9 +15,16 @@ const Hero = () => {
       <div className='flex justify-center items-center'>
           <Typed
           className='md:text-5xl sm:text-4xl text-xl font-bold md:pl-4 pl-2  text-[#00bf63]'
-            strings={['Sell a Business.', 'Buy a Business.', 'Invest in a Business.', 'Fund a Business']}
-            typeSpeed={180}
-            backSpeed={180}
+            strings={[
+              'investorsGo Assists ...',
+              'with Crowdfunding',
+              'with Pitching',
+              'with Outsourcing',
+              'with Venture Capital',
+              'Register Today.'
+            ]}
+            typeSpeed={250}
+            backSpeed={200}
             loop
           />
         </div>

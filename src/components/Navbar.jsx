@@ -25,6 +25,7 @@ const Navbar = () => {
   const handleClickMessages = () => navigate('/messages');
   const handleClickMembership = () => navigate('/membership');
   const handleClickBrandAmbassador = () => navigate('/brandambassador');
+  const handleClickSupport = () => navigate('/support');
   const handleClickHome = () => navigate('/');
 
   return (
@@ -54,7 +55,7 @@ const Navbar = () => {
           <button className="hover:bg-[#445760] p-3 flex"><span className="px-3"><FaRegNewspaper size={20}/></span>GoInvestorNewsletter</button>
           <button className="hover:bg-[#445760] p-3 flex" onClick={handleClickBrandAmbassador}><span className="px-3"><BsMegaphone size={20}/></span>Brand Ambassador</button>
           <button className="hover:bg-[#445760] p-3 flex"><span className="px-3"><FiSettings size={20}/></span>Settings</button>
-          <button className="hover:bg-[#445760] p-3 flex border-b"><span className="px-3"><BiHelpCircle size={20}/></span>Help</button>
+          <button className="hover:bg-[#445760] p-3 flex border-b" onClick={handleClickSupport}><span className="px-3"><BiHelpCircle size={20}/></span>Support</button>
           <button className="hover:bg-[#445760] p-3 py-4 flex"><span className="px-3"><BiLogOut size={20}/></span>Log-Out</button>
           </ul>
           </div>
@@ -88,7 +89,7 @@ const Navbar = () => {
           <button className="hover:bg-[#445760] p-2 flex"><span className="px-3"><GoVerified size={20}/></span>investors<span className="text-[#00bf63]">+</span></button>
           <button className="hover:bg-[#445760] p-2 flex"><span className="px-3"><LiaUserFriendsSolid size={20}/></span>Friends</button>
           <button className="hover:bg-[#445760] p-2 flex"><span className="px-3"><FiSettings size={20}/></span>Settings</button>
-          <button className="hover:bg-[#445760] p-2 flex border-b"><span className="px-3"><BiHelpCircle size={20}/></span>Help</button>
+          <button className="hover:bg-[#445760] p-2 flex border-b"><span className="px-3"><BiHelpCircle size={20}/></span>Support</button>
           <button className="hover:bg-[#445760] p-2 py-4 flex shadow-xl"><span className="px-3"><BiLogOut size={20}/></span>Log-Out</button>
           </ul>
           </div>

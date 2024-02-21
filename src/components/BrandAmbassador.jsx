@@ -8,6 +8,10 @@ import {FiCopy} from 'react-icons/fi';
 var code = "v12345b";
 
 const BrandAmbassador = () => {
+
+  const preventLoad = async (e) =>{
+    e.preventDefault();
+  }
   return(
     <div className='text-white'>
       <Helmet>
@@ -22,7 +26,7 @@ const BrandAmbassador = () => {
             <h3>The Brand Ambassador Program is a referral program created to help investorsGo increase its clients and investors. In exchange, after certain milestones, program members can earn prizes. To see prizes and milestones, click on "Check Rewards".</h3>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form className="card-body">
+            <form className="card-body" onSubmit={preventLoad}>
               <div className="form-control">
                 <h2 className="label mb-6 font-bold">
                   Your Brand Ambassador Referral Code
