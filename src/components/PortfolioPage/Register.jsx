@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 
 import { IoEyeSharp, IoEyeOffSharp } from "react-icons/io5";
 
-export const loggedIn = true; 
+export const loggedIn = false; 
 
 export const email = 'info@investorsgo.co';
 export const firstName = 'investorsGo';
